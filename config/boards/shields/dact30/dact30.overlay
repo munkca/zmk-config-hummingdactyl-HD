@@ -8,10 +8,11 @@
   * This is identical to the Hummingbird overlay in the main ZMK repo, with the
   * exception that I changed the matrix-transform map below to match the
   * physical location of the lowered pinky column in the Tern board.
+  * STILL NEEDS REVISIONS! 2026.07.26
   */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "tern-layouts.dtsi"
+#include "dact30-layouts.dtsi"
 
 &physical_layout0 {
     transform = <&default_transform>; // Label of the matrix transform this layout uses
