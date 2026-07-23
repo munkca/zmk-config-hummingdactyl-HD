@@ -1,0 +1,237 @@
+layout: {zmk_keyboard: tern}
+layers:
+  HD-Vf:
+  - W
+  - M
+  - G
+  - X
+  - {t: '''', s: '"'}
+  - {t: ., s: ':'}
+  - {t: '?', s: '!'}
+  - J
+  - {t: S, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - K
+  - {t: ',', h: '$$mdi:apple-keyboard-caps$$', s: ;}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: H, h: '$$mdi:apple-keyboard-command$$'}
+  - F
+  - P
+  - L
+  - D
+  - U
+  - O
+  - Y
+  - B
+  - {t: '$$mdi:backspace$$', h: 1-Sym, s: '$$mdi:backspace-reverse-outline$$'}
+  - {t: R, h: 3-Nav}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', h: 2-Num}
+  1-Sym:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Win Prev
+  - Win Next
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '|'
+  - {t: \, s: '|'}
+  - {t: <, s: ≤}
+  - {t: '>', s: ≥}
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
+  - ∞
+  - {t: /, s: '?'}
+  - {t: '~', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '%', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ^, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '&', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '''', s: '"'}
+  - '"'
+  - PSCRN
+  - Print Sel
+  - {t: '`', s: '~'}
+  - '@'
+  - '#'
+  - $
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  2-Num:
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - +
+  - '*'
+  - ≈
+  - {t: <, s: ≤}
+  - {t: '>', s: ≥}
+  - {t: '=', h: '$$mdi:apple-keyboard-command$$', s: +}
+  - {t: '4', h: '$$mdi:apple-keyboard-option$$', s: $}
+  - {t: '5', h: '$$mdi:apple-keyboard-shift$$', s: '%'}
+  - {t: '6', h: '$$mdi:apple-keyboard-control$$', s: ^}
+  - {t: '-', s: _}
+  - {t: /, s: '?'}
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - {t: '0', s: )}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: ., s: '>'}
+  - °
+  - π
+  - ·
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  3-Nav:
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - $$mdi:keyboard-tab-reverse$$
+  - $$mdi:keyboard-esc$$
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:transfer-up$$
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:keyboard-tab$$
+  - Alt+$$mdi:arrow-left-bold$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - Alt+$$mdi:arrow-right-bold$$
+  - UNDO
+  - CUT
+  - COPY
+  - Paste Match
+  - END
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:transfer-down$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  4-Sys:
+  - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - OUT USB
+  - $$mdi:brightness-5$$
+  - $$mdi:volume-high$$
+  - $$mdi:skip-next$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - OUT BLE
+  - $$mdi:brightness-7$$
+  - $$mdi:volume-low$$
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&soft_off'
+  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
+  - $$mdi:volume-off$$
+  - $$mdi:skip-previous$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [0, 2]
+  k: {t: QU, s: Q}
+  l: [HD-Vf]
+  a: top
+  o: 0.5
+- p: [9, 11]
+  k: Z
+  l: [HD-Vf]
+  a: top
+  o: 0.15
+- p: [18, 19]
+  k: V
+  l: [HD-Vf]
+  a: bottom
+  o: 0.15
+- p: [27, 28]
+  k: 4-Sys
+- p: [28, 29]
+  k: Num Word
+  a: bottom
+  o: 0.15
+- p: [2, 3]
+  k: Win Next
+  a: top
+- p: [24, 25]
+  k: $$mdi:alpha-w-box$$
+  l: [HD-Vf]
+  draw_separate: true
+- p: [23, 24, 25]
+  k: $$mdi:apple-keyboard-caps$$
+  l: [HD-Vf]
+  draw_separate: true
+- p: [12, 20, 21]
+  k: CMD ENTER
+  draw_separate: true
+- p: [12, 21]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  draw_separate: true
+- p: [11, 12]
+  k: $$mdi:keyboard-space$$
+  draw_separate: true
+- p: [8, 11]
+  k: $$mdi:keyboard-esc$$
+  draw_separate: true
+- p: [18, 21]
+  k: SELECT ALL
+  draw_separate: true
+- p: [5, 7]
+  k: {t: ':', h: '...'}
+  l: [HD-Vf]
+  a: top
+  o: 0.5
+- p: [13, 14]
+  k: {t: ;, s: ':'}
+  l: [HD-Vf]
+- p: [18, 19]
+  k: {t: '[', s: '{'}
+  l: [2-Num, 1-Sym]
+- p: [19, 20]
+  k: (
+  l: [2-Num, 1-Sym]
+- p: [20, 21]
+  k: '{'
+  l: [2-Num, 1-Sym]
+- p: [24, 25]
+  k: {t: ']', s: '}'}
+  l: [2-Num, 1-Sym]
+- p: [23, 24]
+  k: )
+  l: [2-Num, 1-Sym]
+- p: [22, 23]
+  k: '}'
+  l: [2-Num, 1-Sym]
+- p: [14, 16]
+  k: ':'
+  l: [2-Num]
+- p: [3, 12]
+  k: ±
+  l: [2-Num]

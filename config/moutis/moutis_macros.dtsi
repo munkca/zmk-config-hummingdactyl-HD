@@ -1,0 +1,237 @@
+/*
+ * moutis_macros.dtsi
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * t_  = type text
+ * b_  = backspace then type text (often for "adaptive key")
+ * m_  = macro (performs commands/behaviors, incl. typing).
+ * ak_ = type a letter as an adaptive key (consider the prior key).
+ *
+ */
+ 
+ //
+ // What am I doing wrong here? This doesn't seem to work. Why?
+ // copying all these into the macro def works, but no as a
+ // preprocessor macro? What gives?
+ //
+ #define RELEASE_ALL_MODS <&macro_release &kp LSHFT> \
+                        , <&macro_release &kp RSHFT> \
+                        , <&macro_release &kp LALT> \
+                        , <&macro_release &kp RALT> \
+                        , <&macro_release &kp LCTL> \
+                        , <&macro_release &kp RCTL> \
+                        , <&macro_release &kp LGUI> \
+                        , <&macro_release &kp RGUI> 
+/*
+*     ZMK_MACRO(m_alpha,
+*        bindings =
+*            <&kp LANG2>,    // switch to Roman/Latin script (m_henk/latin)
+*            <&to l_hd>;     // make alpha layer default
+*       )
+*     ZMK_MACRO(m_japan,
+*        bindings =
+*            <&kp LANG1>,    // switch to Japanese script (henk/kana/romaji)
+*            <&to l_jp>;     // make Japanese layer default
+*       )
+*/
+
+/*
+ *
+ * App switcher "SlAppy" & "SlApBack"
+ * holds up the app menu, allows L/R navigation
+ *
+ */
+
+   ZMK_MACRO(SlAppy,        // "Sticky Layer App Switcher"
+        wait-ms = <50>; tap-ms = <20>;
+        bindings =
+                  <&macro_press &kp RGUI>    // leave GUI down to keep menu up
+                , <&macro_tap &kp TAB>       // (use press for repeat)
+                , <&tog l_nav>               // to navigate the app menu
+                , <&macro_pause_for_release> // hold to keep menu up or for repeat ...
+                , <&tog l_nav>               // done navigating
+                , <&macro_tap &skapp LGUI>   // release other GUI after a timeout
+                , <&macro_release &kp RGUI>  // release the previous hold
+                ;
+        )
+    ZMK_MACRO(SlApBack,        // "Sticky Layer App Switcher Backwards"
+        wait-ms = <50>; tap-ms = <20>;
+        bindings =
+                  <&macro_press &sk RGUI>     // leave GUI down to keep menu up
+                , <&macro_press &kp LSHFT>    //
+                , <&macro_tap &kp TAB>        // just tap for no repeat
+                , <&macro_pause_for_release>  // hold for repeat ...
+                , <&macro_release &kp LSHFT>  //
+                , <&macro_tap &skapp LGUI>    // release other GUI after a timeout
+                , <&macro_release &sk RGUI>   // now release the previous hold
+                ;
+        )
+
+    ZMK_MACRO(m_numword,
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&num_word l_num>
+                ;
+        )
+
+/*
+ *
+ * basic editing macros
+ *
+ */
+
+    ZMK_MACRO(m_selword,
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&macro_tap &kp LA(LEFT)>
+                , <&macro_tap &kp LS(LA(RIGHT))>
+                ;
+        )
+    ZMK_MACRO(m_findsel,
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&macro_tap &kp LG(C)>
+                , <&macro_tap &kp LG(F)>
+                , <&macro_tap &kp LG(V)>
+                , <&macro_tap &kp RETURN>
+                , <&macro_tap &kp LG(G)>
+                ;
+        )
+
+/*
+ *
+ * paired symbols [({<« “‘|’” »>})]
+ * leaving insertion point between
+ *
+ */
+
+    ZMK_MACRO(t_pairDquo,   // type "" put insertion between
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&macro_release &kp LCTL>
+                , <&macro_release &kp RCTL>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_tap &kp LDQUO>
+                , <&macro_tap &kp RDQUO>
+                , <&macro_tap &kp LEFT>
+                ;
+        )
+    ZMK_MACRO(t_pairSquo,   // type '' put insertion between
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&macro_release &kp LCTL>
+                , <&macro_release &kp RCTL>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_tap &kp LSQUO>
+                , <&macro_tap &kp RSQUO>
+                , <&macro_tap &kp LEFT>
+                ;
+        )
+    ZMK_MACRO(t_pairLtGt,   // type <> put insertion between
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&macro_release &kp LCTL>
+                , <&macro_release &kp RCTL>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_tap &kp LT>
+                , <&macro_tap &kp GT>
+                , <&macro_tap &kp LEFT>
+                ;
+        )
+    ZMK_MACRO(t_pairPar,    // type () put insertion between
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&macro_release &kp LCTL>
+                , <&macro_release &kp RCTL>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_tap &kp LPAR>
+                , <&macro_tap &kp RPAR>
+                , <&macro_tap &kp LEFT>
+                ;
+        )
+    ZMK_MACRO(t_pairBrc,    // type {} put insertion between
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&macro_release &kp LCTL>
+                , <&macro_release &kp RCTL>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_tap &kp LBRC>
+                , <&macro_tap &kp RBRC>
+                , <&macro_tap &kp LEFT>
+                ;
+        )
+    ZMK_MACRO(t_pairBkt,    // type [] put insertion between
+        tap-ms = <my_tapping_speed>;
+        bindings =  <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&macro_release &kp LCTL>
+                , <&macro_release &kp RCTL>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_tap &kp LBKT>
+                , <&macro_tap &kp RBKT>
+                , <&macro_tap &kp LEFT>
+                ;
+        )
+  
+   
+/*
+    ZMK_MACRO(sl_dot,
+        bindings = <&macro_tap &kp DOT>
+                , <&sl l_akDot>
+                ;
+        )
+
+    ZMK_MACRO(sl_P,
+        bindings = <&macro_tap &kp P>
+                , <&sl l_akDot>
+                ;
+        )
+    ZMK_MACRO(sl_L,
+        bindings = <&macro_tap &kp L>
+                , <&sl l_akDot>
+                ;
+        )
+    ZMK_MACRO(sl_M,
+        bindings = <&macro_tap &kp M>
+                , <&sl l_akDot>
+                ;
+        )
+*/
+
+    ZMK_MACRO(t_Semi,
+        tap-ms = <my_tapping_speed>;
+        bindings = <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SEMICOLON>
+                ;
+        )
+
+
+
+
+#ifdef H_DIGRAPH_COMBOS                 // H-digraphs? (Th, Ch, Wh, Sh, Gh, Ph)
+#include "moutis_m_h_digraph.dtsi"
+#endif // H_DIGRAPH_COMBOS
+
+
+

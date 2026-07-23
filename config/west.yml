@@ -1,0 +1,28 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+    - name: urob
+      url-base: https://github.com/urob
+    - name: ssbb
+      url-base: https://github.com/ssbb
+  projects:
+    - name: zmk
+      remote: zmkfirmware # zmkfirmware or urob
+      revision: v0.3 # main or v0.2+fix-child-nodes
+
+      import: app/west.yml
+
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
+    - name: zmk-auto-layer # used in &num_word
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
+#    - name: zmk-antecedent-morph
+#      remote: ssbb
+#      revision: v1
+  self:
+    path: config
