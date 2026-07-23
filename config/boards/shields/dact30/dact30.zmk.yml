@@ -1,6 +1,6 @@
 file_format: "1"
-id: tern
-name: Tern
+id: dact30
+name: Dact30
 type: shield
 url: https://github.com/rschenk/tern
 requires: [seeed_xiao]
