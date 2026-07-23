@@ -2,7 +2,7 @@ file_format: "1"
 id: dact30
 name: Dact30
 type: shield
-url: https://github.com/rschenk/tern
+url: https://github.com/munkca/zmk-config-hummingdactyl-HD
 requires: [seeed_xiao]
 features:
   - keys
