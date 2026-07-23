@@ -1,17 +1,18 @@
 
-# [**Hands Down**](http://handsdownlayout.com) on [**Tern_BLE**](https://gitlab.com/gleb_sexy/tern-ble/)
+# [**Hands Down**](http://handsdownlayout.com) on a 30-key Dactyl
 
-a wireless 30-key descendent of the [**Hummingbird**](https://github.com/PJE66/hummingbird), via Ryan Schenk's [**Tern**](https://github.com/rschenk/tern/).
-Keymap based on [Moutis's](https://github.com/moutis/zmk-config) adapted ZMK take on [**Hands Down**](http://handsdownlayout.com) on small portable boards.  Thanks!
+a wireless 30-key descendent of the [**Hummingbird**](https://github.com/PJE66/hummingbird) Keymap based on [Moutis's](https://github.com/moutis/zmk-config) adapted ZMK take on [**Hands Down**](http://handsdownlayout.com) on small portable boards.  Thanks!
+
+I am reusing this layout (which I am using on a Tern-ble) and revising the zmk for an upcoming hand-wired minimal dactyl, using Xiao-ble microcontrollers. I will post more details as the design develops. 
+
+Currently the case looks [like this.](https://ryanis.cool/cosmos/beta#cm:CoYBCg8SBRCgQyAAEgA4MUCGrAYKDxIFEJBNIBMSAiAAEgA4HQodEgUQkFkgExICIAASAxCwLzgJQIDUhvgESICAtBQKGhIFEJBlIBMSAiAAEgMQsDs4CkCAXkiAgLwuChgSBRCQcSATEgIgADgeQJOWjsAHSICAxEwYAEDohaCu8FVI2tyioAMKSQopEhMQwIACIABAi4XYlhBIjYWAwN0NEhAQQCAAQJrElghIjYWAwN0NOAAYAiIICMMBEMMBIAAwgChAnY3MrPBcSLypjLzwswgQAiIGCMoBEL4BOAJIBlhKaAByBRBykAFyggEBAg==) 
 
 And thanks to Cem Aksoylar for his amazing [**keymap-drawer!**](https://github.com/caksoylar/keymap-drawer) What a labour-saver!
 
 Thanks also to Jorge Villalobos, who has a great keymap-drawer [**configuration**](https://github.com/minusfive/knucklehead), which helped me to clean mine up.
 
-**Warning:** This repository is quite messy, as I copied much over, tried to simplify things down to make it more understandable（I'm very new to ZMK), and is still a work in progress. I have only remapped the vf keymap and required extra files for 30 keys. The rest still are set up for 34.
+**Warning:** work in progress
 
-## Case 
-I have redesigned the case, but note that I have not yet tested it out to confirm how well it fits, so beware! It is sized to include a 1.5mm acrylic top plate and a 0.7mm gasket between the top plate and pcb.
 
 **Hands Down** *Vibranium-Vf*
 ```
