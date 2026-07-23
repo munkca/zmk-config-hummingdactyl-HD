@@ -1,9 +1,9 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_TERN
+if SHIELD_DACT30
 
 config ZMK_KEYBOARD_NAME
-    default "Tern HD-Vf"
+    default "Dact30 HD-Vf"
 
 endif
