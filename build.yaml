@@ -8,5 +8,5 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: tern
+    shield: dact30
 
